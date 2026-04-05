@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Arceus Technologies</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-primary: #1a73e8;
+            --text-main: #1f1f1f;
+            --text-muted: #5f6368;
+            --bg-offset: #f8f9fa;
+            --border: #dadce0;
+            --radius-lg: 24px;
+            --shadow-subtle: 0 1px 3px rgba(0,0,0,0.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            color: var(--text-main); 
+            line-height: 1.6;
+            background: #fff;
+            font-size: 1.05rem; /* Your requested larger font size */
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        section { padding: 100px 0; }
+        .section-label { color: var(--brand-primary); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1.5px; display: block; margin-bottom: 16px; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: sticky; top: 0; background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+        }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 1.4rem; color: var(--brand-primary); }
+        
+        /* --- HERO --- */
+        .hero { padding: 100px 0 60px 0; background: radial-gradient(circle at bottom left, #e8f0fe, #fff); }
+        .hero h1 { font-size: clamp(2.5rem, 8vw, 3.5rem); margin-bottom: 16px; font-weight: 800; }
+        .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 700px; }
+
+        /* --- LAYOUT GRID --- */
+        .contact-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 48px; 
+            margin-top: 20px; 
+        }
+
+        /* --- FORM STYLES --- */
+        .form-card { 
+            padding: 40px; 
+            border: 1px solid var(--border); 
+            border-radius: var(--radius-lg); 
+            background: #fff; 
+        }
+        .form-group { margin-bottom: 24px; display: flex; flex-direction: column; gap: 8px; }
+        .form-group label { font-weight: 700; font-size: 0.9rem; color: var(--text-main); }
+        
+        .form-group input, .form-group select, .form-group textarea {
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 14px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-offset);
+            color: var(--text-main);
+            transition: 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--brand-primary);
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.1);
+        }
+
+        .submit-btn {
+            background: var(--brand-primary);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 16px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .submit-btn:hover { filter: brightness(0.9); }
+
+        /* --- ACTION TILES --- */
+        .action-tile {
+            padding: 30px; border-radius: 16px; display: flex; align-items: center; gap: 20px;
+            text-decoration: none; font-weight: 700; transition: 0.3s; border: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+        .whatsapp-tile { background: #e7f5ed; color: #128c7e; border-color: #c3e6d2; }
+        .email-tile { background: #e8f0fe; color: #1a73e8; border-color: #d2e3fc; }
+        .action-tile:hover { transform: scale(1.02); filter: brightness(0.95); }
+
+        /* Animation */
+        .slide-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .slide-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-inner">
+            <div class="logo">Arceus Technologies</div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container slide-up active">
+            <span class="section-label">Contact Us</span>
+            <h1>Let's Build Together</h1>
+            <p>Have a project in mind or want to know more about our backend capabilities? Reach out to us below.</p>
+        </div>
+    </section>
+
+    <section style="padding-top: 0;">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <div class="form-card slide-up active">
+                    <form action="https://formspree.io/f/your-form-id" method="POST" style="display: flex; flex-direction: column;">
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Inquiry Type</label>
+                            <select id="subject" name="subject">
+                                <option value="Custom Software">Custom Software Development</option>
+                                <option value="Web App">Web Application Build</option>
+                                <option value="General">General Business Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Describe your project goals..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="slide-up active" style="transition-delay: 0.1s;">
+                    <span class="section-label">Direct Lines</span>
+                    <h3 style="margin-bottom: 20px;">Skip the form entirely</h3>
+                    
+                    <a href="https://wa.me/your-number" class="action-tile whatsapp-tile">
+                        <div>
+                            <div style="font-size: 1.1rem;">Message on WhatsApp</div>
+                            <div style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">Instant routing to a developer</div>
+                        </div>
+                    </a>
+
+                    <a href="mailto:support@arceustechnologies.com" class="action-tile email-tile">
+                        <div>
+                            <div style="font-size: 1.1rem;">Email Us Directly</div>
+                            <div style="font-size: 0.85rem; font-weight: 500; opacity: 0.8;">cont@arceustechnologies.com</div>
+                        </div>
+                    </a>
+
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 30px; line-height: 1.6;">
+                        <strong>Operating Hours:</strong> Mon-Fri, 9:00 AM to 6:00 PM IST. We aggressively check incoming support pings to ensure smooth server operation.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+      <footer style="background:#0f172a; color:#e5e7eb; padding:60px 0;">
+  <div class="container" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:40px;">
+
+    <!-- Brand -->
+    <div>
+      <h2 style="color:#fff; margin-bottom:10px;">Arceus Technologies</h2>
+      <p style="font-size:0.9rem; color:#9ca3af;">
+        We build modern, high-performance websites designed for businesses that want to grow online.
+      </p>
+    </div>
+
+
+    <!-- Company -->
+    <div>
+      <h3 style="color:#fff; margin-bottom:10px;">Company</h3>
+        <p><a href="/" style="color:#9ca3af;">Home</a></p>
+        <p><a href="/work/" style="color:#9ca3af;">How We Work</a></p>
+      <p><a href="/about/" style="color:#9ca3af;">About</a></p>
+        
+    </div>
+       <!-- Support -->
+        <div>
+      <h3 style="color:#fff; margin-bottom:15px; font-size:1.1rem;">Support</h3>
+      
+      <p >
+        <a href="https://github.com/Arceusbuilds" target="_blank" rel="noopener" style="color:#9ca3af; ">Report a Bug</a>
+      </p>
+      <p >
+        <a href="/contact/" style="color:#9ca3af; ">Contact Support</a>
+      </p>
+    </div>
+
+      
+      
+      
+
+    <!-- Legal -->
+    <div>
+      <h3 style="color:#fff; margin-bottom:10px;">Legal</h3>
+      <p><a href="/terms/" style="color:#9ca3af;">Terms & Conditions</a></p>
+      <p><a href="/privacy/" style="color:#9ca3af;">Privacy Policy</a></p>
+          <p>
+      <a href="/disclaimer/"
+      style="color:#9ca3af;">Disclaimers</a></p>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div style="border-top:1px solid #1f2937; margin-top:40px; padding-top:20px; text-align:center;">
+    <p style="font-size:0.85rem; color:#9ca3af;">
+      © 2026 Arceus Technologies. All rights reserved.
+    </p>
+    <p style="font-size:0.75rem; color:#6b7280;">
+      Professional. Modular. Authentic.
+    </p>
+  </div>
+  </footer>
+
+</body>
+  </html>
+                              
