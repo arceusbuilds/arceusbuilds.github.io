@@ -1,1 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velox Motors | Engineering the Future</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --dark:#0f172a;
+  --accent:#1a73e8;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --bg:#f9fafb;
+}
+
+body{
+  margin:0;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  color:var(--text);
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:#fff;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+}
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:var(--muted);
+  font-weight:600;
+}
+
+/* HERO */
+.hero{
+  height:90vh;
+  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  color:#fff;
+  padding:0 40px;
+}
+.hero h1{
+  font-size:3.5rem;
+}
+.hero p{
+  max-width:500px;
+}
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 24px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+/* SECTION */
+.section{
+  padding:80px 40px;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+/* CARDS */
+.card{
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:12px;
+  overflow:hidden;
+}
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+.card h3{
+  padding:15px;
+}
+.card p{
+  padding:0 15px 20px;
+  color:var(--muted);
+}
+
+/* FEATURES */
+.features{
+  background:var(--bg);
+}
+.feature-box{
+  padding:20px;
+}
+
+/* CTA */
+.cta{
+  background:var(--dark);
+  color:#fff;
+  text-align:center;
+  padding:60px 20px;
+}
+
+/* DEMO NOTE */
+.demo-note{
+  background:#fff7ed;
+  border-top:3px solid orange;
+  padding:30px;
+  font-size:0.9rem;
+}
+
+/* FOOTER */
+footer{
+  background:#0f172a;
+  color:#d1d5db;
+  text-align:center;
+  padding:30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <strong>Velox Motors</strong>
+  <div>
+    <a href="#">Home</a>
+    <a href="#models">Models</a>
+    <a href="#features">Technology</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Engineering the Future of Driving</h1>
+    <p>High-performance vehicles crafted with precision, innovation, and modern design.</p>
+    <a href="#models" class="btn">Explore Vehicles</a>
+  </div>
+</section>
+
+<!-- MODELS -->
+<section class="section" id="models">
+  <div class="container">
+    <h2>Our Vehicles</h2>
+
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+        <h3>Velox X1 Sedan</h3>
+        <p>Luxury sedan offering smooth performance and advanced comfort.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
+        <h3>Velox GT Sport</h3>
+        <p>Performance-focused sports car built for speed and precision.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c">
+        <h3>Velox SUV Pro</h3>
+        <p>Powerful and spacious SUV designed for modern lifestyles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section features" id="features">
+  <div class="container">
+    <h2>Technology & Innovation</h2>
+
+    <div class="grid">
+      <div class="feature-box">
+        <h3>Advanced Engineering</h3>
+        <p>Built with cutting-edge automotive technology ensuring safety and performance.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Smart Connectivity</h3>
+        <p>Seamless digital integration with modern infotainment systems.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Eco Efficiency</h3>
+        <p>Optimized engines designed for reduced emissions and better efficiency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <h2>About Velox Motors</h2>
+    <p>
+      Velox Motors represents innovation in the automotive industry. This demo project demonstrates how an automobile brand can present its identity, products, and technology in a modern and structured digital format.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Experience the Drive</h2>
+  <p>Connect with our team to learn more about our vehicles.</p>
+  <a href="#contact" class="btn">Contact Us</a>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container" style="text-align:center;">
+    <h2>Contact</h2>
+    <p>Email: demo@veloxmotors.com</p>
+  </div>
+</section>
+
+<!-- DEMO NOTE -->
+<section class="demo-note">
+  <strong>Note:</strong> This is a demonstration website created for portfolio purposes by Arceus Technologies. 
+  It represents how an automobile company can structure its online presence, showcase products, highlight technological strengths, 
+  and communicate brand identity effectively. The design focuses on clarity, performance, and modern user experience principles.
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Velox Motors | Demo Project
+</footer>
+
+</body>
+  </html>
