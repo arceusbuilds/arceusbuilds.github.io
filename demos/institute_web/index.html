@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Valley Public School</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#166534;
+  --accent:#22c55e;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --bg:#f0fdf4;
+}
+
+body{
+  margin:0;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  color:var(--text);
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:#fff;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+}
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:var(--muted);
+  font-weight:600;
+}
+
+/* HERO */
+.hero{
+  padding:120px 40px;
+  background:linear-gradient(rgba(22,101,52,0.7), rgba(22,101,52,0.7)),
+  url('https://images.unsplash.com/photo-1588072432836-e10032774350');
+  background-size:cover;
+  background-position:center;
+  color:white;
+}
+.hero h1{
+  font-size:3rem;
+}
+.hero p{
+  max-width:600px;
+}
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 24px;
+  background:var(--accent);
+  color:#fff;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+/* SECTION */
+.section{
+  padding:80px 40px;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #eee;
+}
+
+/* ABOUT */
+.about{
+  background:var(--bg);
+}
+
+/* STATS */
+.stats{
+  display:flex;
+  justify-content:space-around;
+  text-align:center;
+}
+.stats div{
+  font-size:1.2rem;
+}
+
+/* CTA */
+.cta{
+  background:var(--primary);
+  color:#fff;
+  text-align:center;
+  padding:60px 20px;
+}
+
+/* DEMO NOTE */
+.demo-note{
+  background:#fff7ed;
+  border-top:3px solid orange;
+  padding:30px;
+  font-size:0.9rem;
+}
+
+/* FOOTER */
+footer{
+  background:#0f172a;
+  color:#d1d5db;
+  text-align:center;
+  padding:30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <strong>Green Valley School</strong>
+  <div>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#academics">Academics</a>
+    <a href="#admissions">Admissions</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Shaping Future Leaders</h1>
+  <p>
+    Green Valley Public School provides quality education focused on academic excellence, character development, and holistic growth.
+  </p>
+  <a href="#admissions" class="btn">Apply Now</a>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="container">
+    <h2>About Our School</h2>
+    <p>
+      Established with a vision to nurture young minds, Green Valley Public School focuses on delivering quality education with modern teaching methods.
+    </p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section">
+  <div class="container stats">
+    <div><strong>1200+</strong><br>Students</div>
+    <div><strong>80+</strong><br>Faculty</div>
+    <div><strong>25+</strong><br>Years Experience</div>
+  </div>
+</section>
+
+<!-- ACADEMICS -->
+<section class="section" id="academics">
+  <div class="container">
+    <h2>Academics</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Primary Education</h3>
+        <p>Strong foundation in core subjects and creativity.</p>
+      </div>
+
+      <div class="card">
+        <h3>Secondary Education</h3>
+        <p>Focused curriculum preparing students for board exams.</p>
+      </div>
+
+      <div class="card">
+        <h3>Senior Secondary</h3>
+        <p>Streams including Science, Commerce, and Arts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section class="section about">
+  <div class="container">
+    <h2>Facilities</h2>
+
+    <div class="grid">
+      <div class="card"><h3>Library</h3><p>Well-stocked academic resources.</p></div>
+      <div class="card"><h3>Science Labs</h3><p>Hands-on learning environment.</p></div>
+      <div class="card"><h3>Sports Ground</h3><p>Encouraging physical development.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSIONS -->
+<section class="section" id="admissions">
+  <div class="container">
+    <h2>Admissions</h2>
+    <p>
+      Admissions are open for the academic year. Students are selected based on merit and interaction.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Join Our School Community</h2>
+  <p>Apply today and start your educational journey with us.</p>
+  <a href="#contact" class="btn">Contact Us</a>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container" style="text-align:center;">
+    <h2>Contact Us</h2>
+    <p>Email: school@example.com</p>
+    <p>Phone: +91 XXXXX XXXXX</p>
+  </div>
+</section>
+
+<!-- DEMO NOTE -->
+<section class="demo-note">
+  <strong>Note:</strong> This is a demonstration website created for portfolio purposes by Arceus Technologies. 
+  It represents how a school or educational institution can present its academic structure, facilities, and admission process online. 
+  The design focuses on clarity, accessibility, and a professional educational environment.
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Green Valley Public School | Demo Project
+</footer>
+
+</body>
+  </html>
